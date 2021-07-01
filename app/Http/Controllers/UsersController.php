@@ -16,7 +16,7 @@ class UsersController extends Controller
         $validator = Validator::make($request->all(),[
             'name' => 'required|string',
             'email' => 'required|string|unique:users,email',
-            'password' => 'required|string|confirmed'
+            'password' => 'required|string'
         ]);
         if($validator->fails()){
             return response()->json([

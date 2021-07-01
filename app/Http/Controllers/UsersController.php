@@ -13,22 +13,39 @@ class UsersController extends Controller
 {
 
     public function registeration(Request $request){
-        $validator = Validator::make($request->all(),[
-            'name' => 'required|string',
-            'email' => 'required|string|unique:users,email',
-            'password' => 'required|string|confirmed'
+        // $validator = Validator::make($request->all(),[
+        //     'name' => 'required|string',
+        //     'email' => 'required|string|unique:users,email',
+        //     'password' => 'required|string|confirmed'
+        // ]);
+        // if($validator->fails()){
+        //     return response()->json([
+        //         'status' => 400, 
+        //         'message'=>'Bad_Request']);
+        // }
+        // $user = New User();
+        // $user->name = $request->name;
+        // $user->email = $request->email;
+        // $user->password = bcrypt($request->password);
+        // $user->save();
+        // return response()->json([
+        //     'message' => 'User added',
+        //     'status' =>200
+        // ]);
+        $input_values = $request->validate([
+            'name'=> 'required|string',
+            'email'=>'required|string|unique:users,email',
+            'password'=>'required|string'
         ]);
-        if($validator->fails()){
-            return response()->json([
-                'status' => 400, 
-                'message'=>'Bad_Request']);
-        }
-        $user = New User();
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = bcrypt($request->password);
-        $user->save();
+        $user = User::create([
+            'name'=>$input_values['name'],
+            'email'=>$input_values['email'],
+            'password'=>bcrypt($input_values['password'])
+        ]);
+        $token = $user->createToken('seamstitch')->plainTextToken;
         return response()->json([
+            'User'=>$user,
+            'Token'=>$token,
             'message' => 'User added',
             'status' =>200
         ]);
@@ -36,24 +53,18 @@ class UsersController extends Controller
 
 
     public function login(Request $request){
-        $validator = Validator::make($request->all(),[
-            'email' => 'required|string',
-            'password' => 'required|string'
+        $input_values = $request->validate([
+            'email'=>'required|string',
+            'password'=>'required|string'
         ]);
-        if($validator->fails()){
-            return response()->json([
-                'status_code' => 400, 
-                'message'=>'Bad_Request']);
-        }
-        $credentisals = request(['email','password']);
-        if(!Auth::attempt($credentisals)){
-            return response()->json([
-                'message'=>'Unauthorized user',
-                'Status Code' => 500
-            ]);
-        }
- 
+
         $user = User::where('email', $request->email)->first();
+        if(!$user || !Hash::check($input_values['password'],$user->password)){
+            return response([
+                'message' => 'Wrong Email or Password',
+
+            ], 401);
+        }
         $token = $user->createToken('seamstitch')->plainTextToken;
         return response()->json([
             'message' => 200,

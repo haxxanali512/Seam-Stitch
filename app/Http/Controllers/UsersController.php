@@ -8,9 +8,11 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Validator;
+use App\Traits\ApiResponser;
 
 class UsersController extends Controller
 {
+    use ApiResponser;
 
     public function registeration(Request $request){
         // $validator = Validator::make($request->all(),[
@@ -53,30 +55,34 @@ class UsersController extends Controller
 
 
     public function login(Request $request){
-        $input_values = $request->validate([
-            'email'=>'required|string',
+        $request->validate([
+            'email'=>'required|email|exists:users',
             'password'=>'required|string'
         ]);
 
-        $user = User::where('email', $request->email)->first();
-        if(!$user || !Hash::check($input_values['password'],$user->password)){
-            return response([
-                'message' => 'Wrong Email or Password',
+        $credentials = $request->only('email', 'password');
 
-            ], 401);
+        if (!Auth::attempt($credentials)) {
+            // Authentication failed...
+            return $this->error('Invalid email or password');
         }
-        $token = $user->createToken('seamstitch')->plainTextToken;
-        return response()->json([
-            'message' => 200,
-            'token'=>$token
-        ]);
+
+        $token = Auth::user()->createToken('seamstitch')->plainTextToken;
+
+        $response = [
+            'id' => Auth::id(),
+            'user' => Auth::user(),
+            'token' => $token,
+        ];
+
+        return $this->success('Login successfully', $response);
     }
+
     public function logout(Request $request){
-        $request->user()->currentAccessToken()->delete();
-        return response()->json([
-            'Status_code'=>200,
-            'message'=>'Token Deleted'
-        ]);
+
+        Auth::user()->currentAccessToken()->delete();
+        return $this->success('Token Deleted');
+
     }
   
 }

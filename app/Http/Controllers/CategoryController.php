@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use Illuminate\Support\Facades\DB;
+use App\Traits\ApiResponser;
 
 class CategoryController extends Controller
-{
+{use ApiResponser;
     /**
      * Display a listing of the resource.
      *
@@ -44,9 +46,11 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showCategories()
     {
-        //
+        $data = DB::table('category')->get();
+        
+        return $this->success('date' ,$data);
     }
 
     /**

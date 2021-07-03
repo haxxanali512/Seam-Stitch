@@ -14,8 +14,14 @@ class CreateCategoryTable extends Migration
     public function up()
     {
         Schema::create('category', function (Blueprint $table) {
+            $table->engine = "InnoDB";
             $table->integer('category_id', true);
+            $table->bigInteger('sub_id')->unsigned();
             $table->string('name');
+            
+        });
+        Schema::table('category', function (Blueprint $table) {
+            $table->foreign('sub_id')->references('id')->on('sub_categories')->onDelete('cascade');
         });
     }
 

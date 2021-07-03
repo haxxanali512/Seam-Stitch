@@ -14,7 +14,7 @@ class AddForeignKeysToProductComponentsTable extends Migration
     public function up()
     {
         Schema::table('product_components', function (Blueprint $table) {
-            $table->foreign('product_id', 'product_components_ibfk_1')->references('product_id')->on('product')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+            $table->foreign('product_id', 'product_components_ibfk_1')->references('product_id')->on('product')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

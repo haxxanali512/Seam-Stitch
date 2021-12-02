@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Notifications\ResetPasswordNotification;
 use Illuminate\Contracts\Auth\CanResetPassword;
 
 class User extends Authenticatable implements MustVerifyEmail
@@ -19,9 +20,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'image_path', 'email', 'password', 'gender','dob','phone_number','isVerified','shop_name','account_id','role_id','fcm_token','email_code','email_verified'
     ];
 
     /**
@@ -42,4 +41,11 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function sendPasswordResetNotification($token)
+    {
+
+        $this->notify(new ResetPasswordNotification($token));
+    }
 }

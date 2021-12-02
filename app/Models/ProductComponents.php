@@ -9,8 +9,11 @@ class ProductComponents extends Model
 {
     protected $table = 'product_components';
     protected $fillable = [
-        'components_id' , 'name', 'catalog_url' , 'product_id'
+        'id' , 'name', 'product_id'
     ];
     public $timestamps = false;
-    
+    public function attributes(){
+        return $this->hasMany('App/ProductAttributes');
+    }
+
 }

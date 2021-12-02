@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\SubCategory;
 use Illuminate\Support\Facades\DB;
 use App\Traits\ApiResponser;
+use GuzzleHttp\Psr7\Message;
 
 class CategoryController extends Controller
-{use ApiResponser;
+{
+    use ApiResponser;
     /**
      * Display a listing of the resource.
      *
@@ -49,7 +52,6 @@ class CategoryController extends Controller
     public function showCategories()
     {
         $data = DB::table('category')->get();
-        
         return $this->success('date' ,$data);
     }
 
@@ -59,31 +61,20 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function getAllCategories()
     {
-        //
+        $data = DB::table('category')->get();
+        foreach($data as $category) {
+            $category->subCategory=[DB::table('sub_category')->where('category_id', '=', $category->id)->get()];
+        }
+        return $this->success('Combined Data', $data);
+       // return response($data);
+        }
+        public function getAllSub(Request $request){
+            $catogires = DB::table('sub_category')->where('category_id','=', $request->category_id)->get();
+            return $this->success('Subcategories', $catogires);
+        }
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-}

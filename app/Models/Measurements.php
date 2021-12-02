@@ -9,7 +9,7 @@ class Measurements extends Model
 {
     protected $table = 'measurement';
     protected $fillable =  [
-        'measurement_id','customer_id', 'neck', 'chest','waist', 'hip','frontwaist','backwaist', 'shoulder','armlength','wrist'
+        'id','user_id', 'type', 'name','shoulder', 'arms','pantslength','shirtlength', 'chest','stomach','waist','images'
     ];
-    public $timestamps = false;
+    public $timestamps = true;
 }

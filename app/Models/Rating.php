@@ -9,7 +9,7 @@ class Rating extends Model
 {
     protected $table = 'rating';
     protected $fillable = [
-        'rating_id' , 'rating', 'tailor_id' , 'customer_id'
+        'id' , 'rating', 'tailor_id' , 'customer_id'
     ];
     public $timestamps = false;
 }

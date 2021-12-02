@@ -1,0 +1,29 @@
+[28-Jul-2021 20:30:04 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 05:27:44 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 05:27:49 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 05:27:56 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 06:02:01 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 06:07:33 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 06:07:37 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 06:10:00 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 06:26:29 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 06:46:49 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 08:03:29 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 09:25:07 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 09:28:21 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 09:28:26 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 10:07:54 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[29-Jul-2021 10:08:36 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.29. in /home/kodeloops/public_html/SeamStitch/vendor/composer/platform_check.php on line 24
+[31-Jul-2021 06:09:03 UTC] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[31-Jul-2021 07:48:43 UTC] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[31-Jul-2021 07:54:39 UTC] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[31-Jul-2021 11:34:36 UTC] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[31-Jul-2021 11:38:56 UTC] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[31-Jul-2021 12:09:52 UTC] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[31-Jul-2021 12:29:37 UTC] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[31-Jul-2021 12:32:53 UTC] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[31-Jul-2021 19:38:35 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1052672 bytes) in /home/kodeloops/public_html/SeamStitch/vendor/symfony/mime/FileinfoMimeTypeGuesser.php on line 60
+[04-Aug-2021 08:55:33 UTC] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[06-Aug-2021 06:27:01 UTC] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[06-Aug-2021 07:45:54 UTC] PHP Warning:  Missing boundary in multipart/form-data POST data in Unknown on line 0
+[06-Aug-2021 08:24:17 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 1052672 bytes) in /home/kodeloops/public_html/SeamStitch/vendor/symfony/mime/FileinfoMimeTypeGuesser.php on line 60

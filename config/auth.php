@@ -46,6 +46,14 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'tailor' => [
+            'driver' => 'sanctum',
+            'provider' => 'tailor',
+        ],
+        'admin' => [
+            'driver' => 'sanctum',
+            'provider' => 'admin',
+        ],
     ],
 
     /*
@@ -70,7 +78,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
+        'tailor' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Tailor::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class OrderItem extends Model
+class Order extends Model
 {
-    protected $table = 'orders';
+    protected $table = 'completed_orders';
     protected $fillable = [
-        'order_id','orderdate','customer_id'
+        'user_id','tailor_id','product','status','quantity','shipping_type','tracking_number','final_price'
     ];
-    public $timestamps = false;
+    public $timestamps = true;
 }

@@ -1,0 +1,8 @@
+[30-Jul-2021 17:08:08 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/kodeloops/public_html/SeamStitch/app/Models/changedfromUsers.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/kodeloops/public_html/SeamStitch/app/Models/changedfromUsers.php on line 8
+[30-Jul-2021 17:08:20 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Database\Eloquent\Model' not found in /home/kodeloops/public_html/SeamStitch/app/Models/Bank.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/kodeloops/public_html/SeamStitch/app/Models/Bank.php on line 8

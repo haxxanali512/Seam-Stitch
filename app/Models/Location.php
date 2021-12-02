@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Location extends Model
 {
-   protected $table = 'locaion';
+   protected $table = 'location';
+   public $timestamps = false;
    protected $fillable = [
-       'location_id', 'longitude','latitude'
+       'id','mobile_number', 'province','city','area'
    ];
-   protected $timestamps = false;
 }

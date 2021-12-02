@@ -1,0 +1,4 @@
+[30-Jul-2021 17:11:05 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Support\Facades\Route' not found in /home/kodeloops/public_html/SeamStitch/routes/api.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/kodeloops/public_html/SeamStitch/routes/api.php on line 21

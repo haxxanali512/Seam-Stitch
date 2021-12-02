@@ -106,5 +106,22 @@ return [
             resource_path('views/vendor/mail'),
         ],
     ],
-
+'stream' => [
+        'ssl' => [
+            'allow_self_signed' => true,
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+        ],
+    ]
 ];
+// return [
+//     'driver' => 'smtp',
+//     'host' => 'smtp.mailgun.org',
+//     'port' => 465,
+//     'encryption' => 'ssl',
+//     'from' => [
+//         'address' => env('MAIL_FROM_ADDRESS', 'admin@dollareast.com'),
+//         'name' => env('MAIL_FROM_NAME', 'Dollareast admin'),
+//     ],
+// ];
+

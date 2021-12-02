@@ -131,9 +131,9 @@ class UsersController extends Controller
         ]);
 
         /* Get credentials from .env */
-        $token = "b41d57d4ba767e8c46f492962e4b30eb";
-        $twilio_sid = "ACe8b9e0dd03ab3bde301a4bbe4f485ea9";
-        $twilio_verify_sid = "VAa8fe5f02d78b2613e660f806210becb4";
+        $token = "";
+        $twilio_sid = "";
+        $twilio_verify_sid = "";
         $twilio = new Client($twilio_sid, $token);
         $twilio->verify->v2->services($twilio_verify_sid)
             ->verifications
@@ -219,9 +219,9 @@ class UsersController extends Controller
             'phone_number' =>  'string'
         ]);
         /* Get credentials from .env */
-        $token = "b41d57d4ba767e8c46f492962e4b30eb";
-        $twilio_sid = "ACe8b9e0dd03ab3bde301a4bbe4f485ea9";
-        $twilio_verify_sid = "VAa8fe5f02d78b2613e660f806210becb4";
+        $token = "";
+        $twilio_sid = "";
+        $twilio_verify_sid = "";
         $twilio = new Client($twilio_sid, $token);
         $verification = $twilio->verify->v2->services($twilio_verify_sid)
             ->verificationChecks
